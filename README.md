@@ -112,16 +112,8 @@ Verifies the data loads correctly (3,900 rows, no nulls), the SQLite DB builds a
 
 `Python` (Pandas, SQLite) · `SQL` (PostgreSQL/SQLite) · `Power BI` · `Jupyter Notebook` · `unittest`
 
----
-
-## 📜 License
-
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
-
----
-
 ## 👤 Author
 
-**Praveen**
+**Uppara Praveen Kumar**
 
-Feel free to fork, star ⭐, or reach out with questions or suggestions!
+
