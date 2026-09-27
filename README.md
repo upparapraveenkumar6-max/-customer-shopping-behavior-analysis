@@ -37,7 +37,6 @@ Retail businesses generate huge volumes of transaction data, but raw data alone 
 | `Business Problem Document.pdf` | Business context and problem statement |
 | `Customer Shopping Behavior Analysis.pdf` | Final written analysis report |
 | `Customer-Shopping-Behavior-Analysis.pptx` | Stakeholder-facing presentation deck |
-| `LICENSE` | MIT License |
 
 ---
 
