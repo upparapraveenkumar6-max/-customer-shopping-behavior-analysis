@@ -106,11 +106,7 @@ python -m unittest test_project_flow -v
 ```
 Verifies the data loads correctly (3,900 rows, no nulls), the SQLite DB builds as expected, and the SQL queries execute successfully.
 
----
-
-## 🧰 Tech Stack
-
-`Python` (Pandas, SQLite) · `SQL` (PostgreSQL/SQLite) · `Power BI` · `Jupyter Notebook` · `unittest`
+---`
 
 ## 👤 Author
 
