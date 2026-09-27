@@ -28,7 +28,10 @@ Retail businesses generate huge volumes of transaction data, but raw data alone 
 | File | Description |
 |---|---|
 | `Customer_Shopping_Behavior_Analysis.ipynb` | Data import, cleaning, exploratory analysis, and SQL DB connection (Python) |
-| `customer_behavior_sql_queries.sql` | 10 SQL business questions — aggregation, CTEs, window functions |
+| `customer_behavior_sql_queries.sql` | 10 SQL business questions — aggregation, CTEs, window functions (PostgreSQL) |
+| `customer_behavior_sql_queries_sqlite.sql` | SQLite-compatible version of the same 10 queries, for local runs without a DB server |
+| `project_runner.py` | Loads & cleans the CSV, engineers features (`age_group`, `purchase_frequency_days`), and builds a local SQLite DB |
+| `test_project_flow.py` | Unit tests covering data loading, DB creation, and SQL query execution |
 | `customer_behavior_dashboard.pbix` | Interactive Power BI dashboard |
 | `customer_shopping_behavior.csv` | Raw dataset (3,900 rows × 18 columns) |
 | `Business Problem Document.pdf` | Business context and problem statement |
@@ -89,11 +92,25 @@ Open `Customer_Shopping_Behavior_Analysis.ipynb` to:
 - `Customer Shopping Behavior Analysis.pdf` — full written findings
 - `Customer-Shopping-Behavior-Analysis.pptx` — stakeholder presentation
 
+### 6. Run it locally without a DB server (SQLite quick-start)
+For a no-setup version of the pipeline (no PostgreSQL/MySQL required):
+```bash
+pip install pandas
+python project_runner.py
+```
+This cleans the CSV, engineers `age_group` and `purchase_frequency_days`, and builds a local `customer_behavior.db` SQLite file you can query with `customer_behavior_sql_queries_sqlite.sql`.
+
+### 7. Run the test suite
+```bash
+python -m unittest test_project_flow -v
+```
+Verifies the data loads correctly (3,900 rows, no nulls), the SQLite DB builds as expected, and the SQL queries execute successfully.
+
 ---
 
 ## 🧰 Tech Stack
 
-`Python` (Pandas, SQLAlchemy) · `SQL` (PostgreSQL/MySQL) · `Power BI` · `Jupyter Notebook`
+`Python` (Pandas, SQLite) · `SQL` (PostgreSQL/SQLite) · `Power BI` · `Jupyter Notebook` · `unittest`
 
 ---
 
